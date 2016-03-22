@@ -1,0 +1,346 @@
+﻿@model IntakeQuestionnaire.Models.QuestionnairePageThree
+
+
+    <img src="~/Images/Mennonite_Central_Committee_Logo.png" /><h7>Mennonite Centeral Committe</h7>
+    <h10>KwaZulu Natal</h10>
+@using (Html.BeginForm())
+{
+    <fieldset style="border: solid black;">
+        <h3>OTHER RELATIVES/FRIENDS IN SA  <i>(Add names, relationships -eg brother/sister, & contact details)</i></h3>
+
+        <div class="editor-field">
+            @Html.TextAreaFor(a => a.otherRelatives, new { style = "width: 1270px; resize:none;" })
+        </div>
+    </fieldset>
+
+    <fieldset style="border: solid black;">
+        <h3>NATURE OF PROBLEM</h3>
+        <fieldset style="height:100px; border:solid;">
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.SocialAssistance)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.CheckBoxFor(a => a.SocialAssistance)
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.Medical)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.CheckBoxFor(a => a.Medical)
+            </div>
+            <div class="editor-label" id="id1">
+                <b>@Html.LabelFor(a => a.Education)</b>
+            </div>
+            <div class="editor-field" id="elA2">
+                @Html.CheckBoxFor(a => a.Education)
+            </div>
+            <div class="editor-label" id="id1">
+                <b>@Html.LabelFor(a => a.vocationalTraining)</b>
+            </div>
+            <div class="editor-field" id="elA2">
+                @Html.CheckBoxFor(a => a.vocationalTraining)
+            </div>
+            <div class="editor-label" id="id2">
+                <b>@Html.LabelFor(a => a.FuneralAssistance)</b>
+            </div>
+            <div class="editor-field" id="elA3">
+                @Html.CheckBoxFor(a => a.FuneralAssistance)
+            </div>
+
+            <div class="editor-label" id="id3">
+                <b>@Html.LabelFor(a => a.Other)</b>
+            </div>
+            <div class="editor-field" id="elA4">
+                @Html.CheckBoxFor(a => a.Other)
+            </div>
+            <div id="elA5">
+                @Html.TextBoxFor(a => a.other1)
+            </div>
+        </fieldset>
+    </fieldset>
+    <fieldset style="border:solid;">
+        <h3>CATEGORY OF CLIENT</h3>
+        <fieldset style="border:solid; height:190px;">
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.singleParent)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.CheckBoxFor(a => a.singleParent)
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.Youth)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.CheckBoxFor(a => a.Youth)
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.VulnerableChild)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.CheckBoxFor(a => a.VulnerableChild)
+            </div>
+            <div class="editor-label" id="w1">
+                @Html.LabelFor(a => a.Abused)
+            </div>
+            <div class="editor-field" id="q1">
+                @Html.CheckBoxFor(a => a.Abused)
+            </div>
+            <div class="editor-label" id="w2">
+                @Html.LabelFor(a => a.Neglected)
+            </div>
+            <div class="editor-field" id="q2">
+                @Html.CheckBoxFor(a => a.Neglected)
+            </div>
+
+            <div class="editor-label" id="w3">
+                @Html.LabelFor(a => a.HIV)
+            </div>
+            <div class="editor-field" id="q3">
+                @Html.CheckBoxFor(a => a.HIV)
+            </div>
+            <div class="editor-label" id="w4">
+                @Html.LabelFor(a => a.Orphan)
+            </div>
+            <div class="editor-field" id="q4">
+                @Html.CheckBoxFor(a => a.Orphan)
+            </div>
+            <div class="editor-label" id="id4">
+                <b>@Html.LabelFor(a => a.vulnerableFamily)</b>
+            </div>
+            <div class="editor-field" id="elA6">
+                @Html.CheckBoxFor(a => a.vulnerableFamily)
+            </div>
+            <div class="editor-label" id="id4">
+                <b>@Html.LabelFor(a => a.ill)</b>
+            </div>
+            <div class="editor-field" id="elA6">
+                @Html.CheckBoxFor(a => a.ill)
+            </div>
+            <div class="editor-label" id="id5">
+                @Html.LabelFor(a => a.Cancer)
+            </div>
+            <div class="editor-field" id="elA7">
+                @Html.CheckBoxFor(a => a.Cancer)
+            </div>
+            <div class="editor-label" id="id6">
+                @Html.LabelFor(a => a.Diabetes)
+            </div>
+            <div class="editor-field" id="elA8">
+                @Html.CheckBoxFor(a => a.Diabetes)
+            </div>
+            <div class="editor-label" id="id7">
+                @Html.LabelFor(a => a.MentalIllness)
+            </div>
+            <div class="editor-field" id="elA9">
+                @Html.CheckBoxFor(a => a.MentalIllness)
+            </div>
+            <div class="editor-label" id="id8">
+                @Html.LabelFor(a => a.HIV)
+            </div>
+            <div class="editor-field" id="elA11">
+                @Html.CheckBoxFor(a => a.HIV)
+            </div>
+            <div class="editor-label" id="id9">
+                @Html.LabelFor(a => a.TB)
+            </div>
+            <div class="editor-field" id="elA12">
+                @Html.CheckBoxFor(a => a.TB)
+            </div>
+            <div class="editor-label" id="id10">
+                <b>@Html.LabelFor(a => a.Aged)</b>
+            </div>
+            <div class="editor-field" id="elA13">
+                @Html.CheckBoxFor(a => a.Aged, false)
+            </div>
+            <div class="editor-label" id="id10">
+                <b>@Html.LabelFor(a => a.vulnerableWomner)</b>
+            </div>
+            <div class="editor-field" id="elA13">
+                @Html.CheckBoxFor(a => a.vulnerableWomner, false)
+            </div>
+            <div class="editor-label" id="id10">
+                <b>@Html.LabelFor(a => a.singleMale)</b>
+            </div>
+            <div class="editor-field" id="elA13">
+                @Html.CheckBoxFor(a => a.singleMale, false)
+            </div>
+            <div class="editor-label" id="id10">
+                <b>@Html.LabelFor(a => a.siblingHeaded)</b>
+            </div>
+            <div class="editor-field" id="elA13">
+                @Html.CheckBoxFor(a => a.siblingHeaded, false)
+            </div>
+            <div class="editor-label" id="id11">
+                <b>@Html.LabelFor(a => a.Other2)</b>
+            </div>
+            <div class="editor-field" id="elA14">
+                @Html.CheckBoxFor(a => a.Other2, false)
+            </div>
+            <div class="editor-field" id="elA15">
+                @Html.TextAreaFor(a => a.other_2, new { style = "width:260px;resize:none;" })
+            </div>
+        </fieldset>
+    </fieldset>
+    <fieldset style="border: solid black; ">
+        <h3>FINANCIAL CIRCUMSTANCES <i>(Explore individual's families' source of income)</i></h3>
+        <fieldset style="border: solid black; height: 210px;">
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.whoIsFormally)</b>
+            </div>
+            <div class="editor-field">
+                @Html.TextAreaFor(a => a.whoIsFormally, new { style = "width:350px;resize:none;" })
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.averageIncome)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                <b>R</b>@Html.TextBoxFor(a => a.averageIncome)
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.ifTotallyUnemployed)</b>
+            </div>
+            <div class="editor-field" id="ela">
+                @Html.TextBoxFor(a => a.ifTotallyUnemployed, new { style = "width:850px; resize:none;" })
+            </div>
+            <div class="editor-label" id="z1">
+                <b>@Html.LabelFor(a => a.whoIsSelfEmployed)</b>
+            </div>
+            <div class="editor-field" id="z1">
+                @Html.TextAreaFor(a => a.whoIsSelfEmployed, new { style = "width:850px; resize:none;" })
+            </div>
+            <div class="editor-label" id="z1">
+                <b>@Html.LabelFor(a => a.averageMonthlyIncome)</b>
+            </div>
+            <div class="editor-field" id="z2">
+                <b>R</b>@Html.TextBoxFor(a => a.averageMonthlyIncome)
+            </div>
+        </fieldset>
+        <h3>EXPENDITURE</h3>
+        <fieldset style="border: solid black; height:145px; ">
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.RentalAmount)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                <b>R</b>@Html.TextBoxFor(a => a.RentalAmount)
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.lightsAndWater)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                <b>R</b>@Html.TextBoxFor(a => a.lightsAndWater)
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.Food)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                <b>R</b>@Html.TextBoxFor(a => a.Food)
+            </div>
+            <div class="editor-label" id="z3">
+                <b>@Html.LabelFor(a => a.Transport)</b>
+            </div>
+            <div class="editor-field" id="z4">
+                <b>R</b>@Html.TextBoxFor(a => a.Transport)
+            </div>
+            <div class="editor-label" id="z3">
+                <b>@Html.LabelFor(a => a.SchoolFees)</b>
+            </div>
+            <div class="editor-field" id="z4">
+                <b>R</b>@Html.TextBoxFor(a => a.SchoolFees)
+            </div>
+            <div class="editor-label" id="z3">
+                <b>@Html.LabelFor(a => a.OtherExpenditure)</b>
+            </div>
+            <div class="editor-field" id="z4">
+                <b>R</b>@Html.TextBoxFor(a => a.OtherExpenditure)
+            </div>
+        </fieldset>
+        <h3>PREVIOUS ASSISTANCE</h3>
+        <fieldset style="border: solid black; height:250px; ">
+            <b>FROM MCC &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Client recieved previous assistance from MCC</b> <br />
+            <br /> <input id="input01" type="text" value="Area" disabled="disabled" style="width:150px" /> <input id="input01" type="text" value="Yes" disabled="disabled" style="width:50px;" /> <input id="input01" type="text" value="Duration" disabled="disabled" />
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.EducationAssistance)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.CheckBoxFor(a => a.EducationAssistance, false)
+            </div>
+            <div class="editor-field" id="z5">
+                @Html.TextBoxFor(a => a.EducationTextBox)
+            </div>
+
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.Social)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.CheckBoxFor(a => a.Social, false)
+            </div>
+            <div class="editor-field" id="z5">
+                @Html.TextBoxFor(a => a.SocialTextBox)
+            </div>
+
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.vocationalAssistance)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.CheckBoxFor(a => a.vocationalAssistance, false)
+            </div>
+            <div class="editor-field" id="z5">
+                @Html.TextBoxFor(a => a.vocationalTextBox)
+            </div>
+            <div class="editor-label" id="z6">
+                <div>
+                    @Html.RadioButtonFor(a => a.YesorNo, "Yes", new {@checked="checked"}) Yes
+                    @Html.RadioButtonFor(a => a.YesorNo, "No") No
+                </div>
+            </div>
+            <div class="editor-label" id="z7">
+                <b>@Html.LabelFor(a => a.microLoan)</b>
+            </div>
+            <div class="editor-field" id="z8">
+                @Html.CheckBoxFor(a => a.microLoan, false)
+            </div>
+            <div class="editor-field" id="z9">
+                @Html.TextBoxFor(a => a.microLoanTextBox)
+            </div>
+            <div class="editor-label" id="z7">
+                <b>@Html.LabelFor(a => a.Referral)</b>
+            </div>
+            <div class="editor-field" id="z8">
+                @Html.CheckBoxFor(a => a.Referral, false)
+            </div>
+            <div class="editor-field" id="z9">
+                @Html.TextBoxFor(a => a.referralTextBox)
+            </div>
+        </fieldset>
+        <fieldset style="border: solid black; height:290px; ">
+            <b>OTHER &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Is the client receiving assistance from any other organisations</b> <br />
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.organisationName)</b>
+            </div>
+            <div class="editor-field">
+                @Html.TextAreaFor(a => a.organisationName, new { style = "width:600px;height:185px; resize:none;" })
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.whenLastAssisted)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.TextBoxFor(a => a.whenLastAssisted)
+            </div>
+            <div class="editor-label" id="z6">
+                <div>
+                    @Html.RadioButtonFor(a => a.NoorYes, "Yes", new { @checked = "checked" }) Yes
+                    @Html.RadioButtonFor(a => a.NoorYes, "No") No
+                </div>
+            </div>
+            <div class="editor-label" id="z11">
+                <b>@Html.LabelFor(a => a.whatIsBeingProvided)</b>
+            </div>
+            <div class="editor-field" id="z11">
+                @Html.TextAreaFor(a => a.whatIsBeingProvided, new { style = "width:600px;height:185px; resize:none;" })
+            </div>
+        </fieldset>
+        
+    </fieldset>
+    <input type="submit" value="Next Page" />
+}
+

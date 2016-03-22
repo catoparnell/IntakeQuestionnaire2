@@ -1,0 +1,69 @@
+﻿@model IntakeQuestionnaire.Models.login
+@{
+    ViewBag.Title = "Index";
+}
+<div id="topBar">
+    <h1>Login <text id="txt1">Panal</text></h1>
+    <h3>Mennonite Centeral Committe KwaZulu Natal</h3>
+</div>
+<div id="Bottom">
+
+</div>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true, "Login failed. Check your login details.");
+        <div>
+            <fieldset>
+                <div class="editor-label">
+                    <b> @Html.LabelFor(u => u.UserName)</b>
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(u => u.UserName)
+                    @Html.ValidationMessageFor(u => u.UserName)
+                </div>
+                <div class="editor-label">
+                   <b>@Html.LabelFor(u => u.Password)</b> 
+                </div>
+                <div class="editor-field">
+                    @Html.PasswordFor(u => u.Password)
+                    @Html.ValidationMessageFor(u => u.Password)     
+                </div>
+                <p><input id="btn1" type="submit" value="Log In" />
+                <form method="get" action="/Register">
+                    <input id="btn1" onclick="window.location.href='/Login_/Register'" type="button" value="Register" /> 
+               </form></p>
+            </fieldset>
+        </div>
+    }
+<style>
+
+    #btn1{
+        background-color:#0094ff;
+        width:80px;
+    }
+    #topBar {
+        background-color: #808080;
+        position: relative;
+        top: -20px;
+        left: -10px;
+        height: 150px;
+        width: 1380px;
+    }
+
+    #txt1 {
+        color: #fffa03;
+    }
+
+    h1 {
+        position: relative;
+        top: 20px;
+        left: 30px;
+        color: white;
+    }
+
+    h3 {
+        position: relative;
+        top: 20px;
+        left: 30px;
+    }
+</style>

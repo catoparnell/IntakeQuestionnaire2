@@ -1,0 +1,217 @@
+﻿@model IntakeQuestionnaire.Models.QuestionnairePageTwo
+<img src="~/Images/Mennonite_Central_Committee_Logo.png" /><h7>Mennonite Centeral Committe</h7>
+<h10>KwaZulu Natal</h10>
+@using (Html.BeginForm())
+{
+
+<fieldset style="border:solid;" >
+    <h3>DETAILS OF SPOUSE</h3>
+    <fieldset style="border: solid; height: 300px;">
+        <div class="editor-label">
+            <b>@Html.LabelFor(a => a.Surname)</b>
+        </div>
+        <div class="editor-field" id="elA">
+            @Html.TextBoxFor(a => a.Surname, new { style = "width:350px" })
+        </div>
+        <div class="editor-label">
+            <b>@Html.LabelFor(a => a.Firstname)</b>
+        </div>
+        <div class="editor-field" id="elA">
+            @Html.TextBoxFor(a => a.Firstname, new { style = "width:350px" })
+        </div>
+        <div class="editor-label">
+            <b>@Html.LabelFor(a => a.address)</b>
+        </div>
+        <div class="editor-field" id="elA">
+            @Html.TextAreaFor(a => a.address, new { style = "width:350px; resize:none;" })
+        </div>
+        <div class="editor-label">
+            <b>@Html.LabelFor(a =>a.refN)</b>
+        </div>
+        <div class="editor-field" id="elA">
+            @Html.TextBoxFor(a => a.refN, new { style = "width:350px" })
+        </div>
+        <div class="editor-label" id="e1">
+            <b>@Html.LabelFor(a => a.dateOfBirth)</b>
+        </div>
+        <div class="editor-field" id="e2">
+            @Html.TextBoxFor(a => a.dateOfBirth, new { type = "date" , style = "width:350px" })
+        </div>
+        <div class="editor-label" id="e1">
+            <b>@Html.LabelFor(a =>a.Gender)</b>
+        </div>
+        <div class="editor-field" id="e2">
+            @Html.RadioButtonFor(a => a.Gender,"Male" ,new{@checked="checked"}) Male
+            @Html.RadioButtonFor(a => a.Gender,"Female") Female
+        </div>
+        <div class="editor-label" id="e1">
+            <b>@Html.LabelFor(a =>a.whenDidTheClientSee)</b>
+        </div>
+        <div class=" editor-field" id="e3">
+            @Html.TextBoxFor(a => a.whenDidTheClientSee, new { style = "width:550px" })
+        </div>
+        <div class="editor-label" id="e4">
+            <b>@Html.LabelFor(a => a.whereSeen)</b>
+        </div>
+        <div class="editor-field" id="e5">
+            @Html.TextBoxFor(a => a.whereSeen, new { style = "width:350px" })
+        </div>
+    </fieldset>
+    <fieldset style="border:solid;">
+        <h3>DETAILS OF DEPENDENTS (All, including those in & out of SA)</h3>
+        <table width="500">
+            <tr>
+                <td>Firstname</td>
+                <td>Surname</td>
+                <td>Date of Birth<br/>(yyyy / mm/dd)</td>
+                <td>Gender<br/>(M/F)</td>
+                <td>Relationship</td>
+                <td>DHA Ref No.</td>
+                <td>Eductional Details</td>
+                <td>Whereabouts/Address</td>
+            </tr>
+            <tr>
+                <td><input id="inputGrid" name="inputGrid1" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid2" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid3" type="date" style="width: 125px" /></td>
+                <td><input id="inputGrid" name="inputGrid4" type="text" style="width:50px" /></td>
+                <td><input id="inputGrid" name="inputGrid5" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid6" type="number" /></td>
+                <td><input id="inputGrid" name="inputGrid7" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid8" type="text" /></td>
+            </tr>
+            <tr>
+                <td><input id="inputGrid" name="inputGrid1a" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid2a" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid3a" type="date" style="width: 125px" /></td>
+                <td><input id="inputGrid" name="inputGrid4a" type="text" style="width:50px" /></td>
+                <td><input id="inputGrid" name="inputGrid5a" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid6a" type="number" /></td>
+                <td><input id="inputGrid" name="inputGrid7a" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid8a" type="text" /></td>
+            </tr>
+            <tr>
+                <td><input id="inputGrid" name="inputGrid1b" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid2b" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid3b" type="date" style="width: 125px" /></td>
+                <td><input id="inputGrid" name="inputGrid4b" type="text" style="width:50px" /></td>
+                <td><input id="inputGrid" name="inputGrid5b" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid6b" type="number" /></td>
+                <td><input id="inputGrid" name="inputGrid7b" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid8b" type="text" /></td>
+            </tr>
+            <tr>
+                <td><input id="inputGrid" name="inputGrid1c" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid2c" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid3c" type="date" style="width: 125px" /></td>
+                <td><input id="inputGrid" name="inputGrid4c" type="text" style="width:50px" /></td>
+                <td><input id="inputGrid" name="inputGrid5c" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid6c" type="number" /></td>
+                <td><input id="inputGrid" name="inputGrid7c" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid8c" type="text" /></td>
+            </tr>
+        </table>
+        
+            <h3>DETAILS OF BIOLOGICAL FAMILY ( parents/ sibiling etc) of Principle Applicants & Spouse</h3>
+        <table style="width:80%">
+            <tr>
+                <td>Firstname</td>
+                <td>Surname</td>
+                <td>Date of Birth<br />(yyyy /mm /dd)</td>
+                <td>Gender <br />(M/F)</td>
+                <td>Relationship</td>
+                <td>DHA Ref No.</td>
+                <td>Eductional Details</td>
+                <td>Whereabouts/Address</td>
+            </tr>
+
+            <tr>
+                <td><input id="inputGrid" name="inputGrida1" type="text" /></td>
+                <td><input id="inputGrid" name="inputGridb1" type="text" /></td>
+                <td><input id="inputGrid" name="inputGridc1" type="date" style="width: 125px" /></td>
+                <td><input id="inputGrid" name="inputGridd1" type="text" style="width:50px" /></td>
+                <td><input id="inputGrid" name="inputGride1" type="text" /></td>
+                <td><input id="inputGrid" name="inputGridf1" type="number" /></td>
+                <td><input id="inputGrid" name="inputGridg1" type="text" /></td>
+                <td><input id="inputGrid" name="inputGridh1" type="text" /></td>
+            </tr>
+            <tr>
+                <td><input id="inputGrid" name="inputGrida2" type="text" /></td>
+                <td><input id="inputGrid" name="inputGridb2" type="text" /></td>
+                <td><input id="inputGrid" name="inputGridc2" type="date" style="width: 125px" /></td>
+                <td><input id="inputGrid" name="inputGridd2" type="text" style="width:50px" /></td>
+                <td><input id="inputGrid" name="inputGride2" type="text" /></td>
+                <td><input id="inputGrid" name="inputGridf2" type="number" /></td>
+                <td><input id="inputGrid" name="inputGridg2" type="text" /></td>
+                <td><input id="inputGrid" name="inputGridh2" type="text" /></td>
+            </tr>
+            <tr>
+                <td><input id="inputGrid" name="inputGrida3" type="text" /></td>
+                <td><input id="inputGrid" name="inputGridb3" type="text" /></td>
+                <td><input id="inputGrid" name="inputGridc3" type="date" style="width: 125px" /></td>
+                <td><input id="inputGrid" name="inputGridd3" type="text" style="width:50px" /></td>
+                <td><input id="inputGrid" name="inputGride3" type="text" /></td>
+                <td><input id="inputGrid" name="inputGridf3" type="number" /></td>
+                <td><input id="inputGrid" name="inputGridg3" type="text" /></td>
+                <td><input id="inputGrid" name="inputGridh3" type="text" /></td>
+            </tr>
+            <tr>
+                <td><input id="inputGrid" name="inputGrida4" type="text" /></td>
+                <td><input id="inputGrid" name="inputGridb4" type="text" /></td>
+                <td><input id="inputGrid" name="inputGridc4" type="date" style="width:125px" /></td>
+                <td><input id="inputGrid" name="inputGridd4" type="text" style="width:50px"/></td>
+                <td><input id="inputGrid" name="inputGride4" type="text" /></td>
+                <td><input id="inputGrid" name="inputGridf4" type="number" /></td>
+                <td><input id="inputGrid" name="inputGridg4" type="text" /></td>
+                <td><input id="inputGrid" name="inputGridh4" type="text" /></td>
+            </tr>
+        </table>
+    </fieldset>
+    <input type="submit" value="Next Page"/> 
+</fieldset>
+}
+
+<style>
+    #inputGrid {
+        width: 120px;
+    }
+    h10{
+        position:relative;
+        top:-10px;
+        right:185px;
+    }
+    #e1 {
+        position: relative;
+        top: -302px;
+        right: -700px;
+    }
+
+    #e2 {
+        position: relative;
+        top: -328px;
+        right: -900px;
+    }
+    #e3{
+        position:relative;
+        top:-300px;
+        right: -700px;
+    }
+    #e4 {
+        position: relative;
+        top: -268px;
+        right: -700px;
+    }
+    #e5 {
+        position: relative;
+        top: -290px;
+        right: -900px;
+    }
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 15px;
+    }
+</style>

@@ -1,0 +1,153 @@
+﻿@model IntakeQuestionnaire.Models.questionnairePageFour
+
+<img src="~/Images/Mennonite_Central_Committee_Logo.png" /><h7>Mennonite Centeral Committe</h7>
+<h10>KwaZulu Natal</h10>
+@using (Html.BeginForm())
+{
+<fieldset style="border:solid">
+    <h3>TRANSIT HISTORY</h3>
+
+    <fieldset style="border:solid; height:650px;">
+        <div class="editor-label">
+            <b>@Html.LabelFor(x =>x.FledFrom)</b>
+        </div>
+        <div class="editor-field" id="elA">
+            @Html.TextBoxFor(x => x.FledFrom, new {style="width:400px;" }) <i>(Country and Town)</i>
+        </div>
+        <div class="editor-label">
+            <b>@Html.LabelFor(x => x.lastAddress)</b>
+        </div>
+        <div class="editor-field" id="m3">
+            @Html.TextBoxFor(x => x.lastAddress, new { style = "width:860px;" })
+        </div>
+            <b>Transit Route and<br /> Reasons for leaving</b><br /><br />
+        <i>Includes:<br /><br />
+        1.Reasons for leaving each<br />
+         destination<br /><br />
+        2. Modes of transport and<br />
+        average time taken to travel<br /><br />
+        3.What documents were<br />
+        used to cross borders
+        </i>
+        <div class="editor-field" id="m1">
+            @Html.TextAreaFor(x => x.transitRoute, new {style="width:920px; height:500px; resize:none;" })
+        </div>
+        <div class="editor-label" id="n1">
+            <b>@Html.LabelFor(x => x.DateofLeaving)</b>
+        </div>
+        <div class="editor-field" id="m2">
+            @Html.TextBoxFor(x => x.DateofLeaving, new {type="date" })
+        </div>
+    </fieldset>
+    <fieldset style="border:solid; height:235px;">
+        <div class="editor-label">
+            <b>@Html.LabelFor(x => x.TravelPaid)</b>
+        </div>
+        <div class="editor-field" id="elA">
+            @Html.TextBoxFor(x => x.TravelPaid, new { style = "width:1075px;" }) 
+        </div>
+        <div class="editor-label">
+            <b>@Html.LabelFor(x => x.stayAtAnyCamps)</b>
+        </div>
+        <div class="editor-field" id="elA">
+            @Html.RadioButtonFor(x => x.stayAtAnyCamps, "Yes", new { @checked = "checked" })<b>Yes</b> 
+            @Html.RadioButtonFor(x => x.stayAtAnyCamps, "No")<b>No</b>
+        </div>
+        <div class="editor-label">
+            <b>@Html.LabelFor(x => x.DatesAtCamps)</b>
+        </div>
+        <div class="editor-field" id="elA">
+            @Html.TextBoxFor(x => x.DatesAtCamps, new { style = "width:1075px;" }) 
+        </div>
+        <div class="editor-label">
+            <b>@Html.LabelFor(x => x.UNHCR)</b>
+        </div>
+        <div class="editor-field" id="elA">
+            @Html.RadioButtonFor(x => x.UNHCR, "Yes")<b>Yes</b>
+            @Html.RadioButtonFor(x => x.UNHCR, "No")<b>No</b> 
+        </div>
+        <div class="editor-label" id="m4">
+            <b>@Html.LabelFor(x => x.CampsName)</b>
+        </div>
+        <div class="editor-field" id="n2">
+            @Html.TextBoxFor(x => x.CampsName, new { style = "width:625px;" })
+        </div>
+        <div class="editor-label" id="m5">
+            <b>@Html.LabelFor(x => x.LeftWithWhom)</b>
+        </div>
+        <div class="editor-field" id="n3">
+            @Html.TextBoxFor(x => x.LeftWithWhom, new { style = "width:625px;" })
+        </div>
+
+    </fieldset>
+    <fieldset style="border:solid;">
+        <div class="editor-label">
+            <b>Available Contact <br /> Details of family etc</b>
+        </div>
+        <div class="editor-field" id="elA">
+            @Html.TextAreaFor(x => x.AvailableContact, new { style = "width:1075px; resize:none;" })
+        </div>
+        <div class="editor-label">
+            <b>@Html.LabelFor(x => x.RelationshipToThem)</b>
+        </div>
+        <div class="editor-field" id="elA">
+            @Html.TextBoxFor(x => x.RelationshipToThem, new { style = "width:1075px;" })
+        </div>
+    </fieldset>
+    <fieldset style="border:solid; height:100px;">
+        <div class="editor-label">
+            <b>@Html.LabelFor(x => x.TracingRequired)</b>
+        </div>
+        <div class="editor-field" id="elA">
+            @Html.RadioButtonFor(x => x.TracingRequired, "Yes", new { @checked = "checked" })<b>Yes</b>
+            @Html.RadioButtonFor(x => x.TracingRequired, "No")<b>No</b>
+        </div>
+        <div class="editor-label">
+            <b>@Html.LabelFor(x => x.Other)</b>
+        </div>
+        <div class="editor-field" id="elA">
+            @Html.TextBoxFor(x => x.Other, new { style = "width:1075px;" })
+        </div>
+        <div class="editor-label" id="m5">
+            <b>@Html.LabelFor(x => x.whereIcrc)</b>
+        </div>
+        <div class="editor-field" id="n4">
+            @Html.RadioButtonFor(x => x.whereIcrc, "ICRC", new { @checked = "checked" })<b>ICRC</b>
+            @Html.RadioButtonFor(x => x.whereIcrc, "UNHCR")<b>UNHCR</b>
+        </div>
+    </fieldset>
+</fieldset>
+<fieldset style="border:solid;">
+    <h3>EXPECTATIONS</h3>
+    <fieldset style="border:solid; height:200px;">
+        <div class="editor-label">
+            <b>@Html.LabelFor(x => x.referredBy)</b>
+        </div>
+        <div class="editor-field" id="elA">
+            @Html.TextBoxFor(x => x.referredBy)
+        </div>
+
+        <div class="editor-label">
+            <b>@Html.LabelFor(x => x.whatDoesTheClient)</b><br />
+            <i>Note: 1.Orientation to SA 2.Options available(Vol Rep/Reunification etc.)</i>
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(x => x.whatDoesTheClient, new { style = "width:1230px; resize:none;" })
+        </div>
+        <div class="editor-label" id="n7">
+            <b>@Html.LabelFor(x => x.referredBy)</b>
+        </div>
+        <div class="editor-field" id="m6">
+            @Html.TextBoxFor(x => x.referredBy, new { style = "width:415px; resize:none;" })
+        </div>
+
+    </fieldset>
+</fieldset>
+<fieldset style="border:solid;">
+    <h3>WORKER'S IMPRESSION/EVALUATION</h3>
+    <div class="editor-field">
+        @Html.TextAreaFor(x => x.WorkersImpression, new { style = "width:1250px; resize:none;" })
+    </div>
+</fieldset>
+<input type="submit" value="Next Page" />
+}

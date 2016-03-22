@@ -1,0 +1,411 @@
+﻿@model IntakeQuestionnaire.Models.Questionnaire
+@using (Html.BeginForm())
+{
+    
+    <fieldset id="align">
+        <img src="~/Images/Mennonite_Central_Committee_Logo.png" /><h7>Mennonite Centeral Committe</h7><h1 id="h1a">INTAKE QUESTIONNAIRE</h1>
+        <h8>KwaZulu Natal</h8>
+        <div id="l1">
+            <div class="editor-label">
+                <b>@Html.LabelFor(q => q.ApplicationRefNumber)</b>
+            </div>
+            <div class="editor-field" id="ef">
+                @Html.TextBoxFor(q => q.ApplicationRefNumber, new { })
+            </div>
+            <div id="el1" class="editor-label">
+                <b>@Html.LabelFor(q => q.familyCode)</b>
+            </div>
+            <div class="editor-field" id="ef1">
+                @Html.TextBoxFor(q => q.familyCode)
+
+            </div>
+            <div id="el2" class="editor-label">
+                <b>@Html.LabelFor(q => q.DateFileOpened)</b>
+            </div>
+            <div id="ef2" class="editor-field">
+                @Html.TextBoxFor(q => q.DateFileOpened, null, new { style = "width:100px", @Value = @DateTime.Now.Month+"/"+@DateTime.Now.Year })
+
+            </div>
+            <div id="el3" class="editor-label">
+                <b>@Html.LabelFor(q => q.No)</b>
+            </div>
+            <div id="ef3" class="editor-field">
+                @Html.TextBoxFor(q => q.No, null, new { style = "width:30px"})
+
+            </div>
+            <text id="txt1">mm/yyyy</text>
+        </div>
+    </fieldset>
+
+    <fieldset style="border: solid;">
+        <h3>DETAILS OF PRINCIPLE APPLICANT</h3>  <h3 id="hed1">Application Date</h3><br /><input id="demo" value="@DateTime.Now" />
+        <fieldset id="align2" style="border:solid;">
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.Interpreter)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.TextBoxFor(a => a.Interpreter, new { style = "width:350px" })
+
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.Surname)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.TextBoxFor(a => a.Surname, new { style = "width:350px"})
+
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.FirstName)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.TextBoxFor(a => a.FirstName, new { style = "width:350px" })
+
+            </div>
+            <div class="editor-label" id="elR">
+                <b>@Html.LabelFor(a => a.YorN)</b>
+            </div>
+            <div class="editor-label" id="elR1">
+                <div>
+                        @Html.RadioButtonFor(a => a.YorN, "Yes", new {@checked="checked" }) Yes
+                        @Html.RadioButtonFor(a => a.YorN, "No") No
+                </div>               
+            </div>
+            <div class="editor-label" id="elR2">
+                <b>@Html.LabelFor(a => a.Initials)</b>
+            </div>
+            <div class="editor-field" id="efR2">
+                @Html.TextBoxFor(a => a.Initials, new { style = "width:200px" })
+
+            </div>
+            <div class="editor-label" id="elR2">
+                <b>@Html.LabelFor(a => a.CommunityName)</b>
+            </div>
+            <div class="editor-field" id="efR2">
+                @Html.TextBoxFor(a => a.CommunityName, new { style = "width:200px" })
+
+            </div>
+        </fieldset>
+        <fieldset id="psn10" style="border:solid;">
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.ContactNumber)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.TextBoxFor(a => a.ContactNumber, new { style = "width:350px" })
+
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.ContactName)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.TextBoxFor(a => a.ContactName, new { style = "width:350px" })    <i>(If not the Principle Applicant)</i>
+
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.Address)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.TextAreaFor(a => a.Address, new { style = "width:350px; resize:none;"})
+            </div>
+            <div class="editor-field" id="WCN">
+                <div>
+                            @Html.RadioButtonFor(a => a.Address, "Own", new { @checked = "checked" }) Own
+                            @Html.RadioButtonFor(a => a.Address, "Neighbour")Neighbour
+                            @Html.RadioButtonFor(a => a.Address, "Friend")Friend
+                            @Html.RadioButtonFor(a => a.Address, "Partner")Partner
+                            @Html.RadioButtonFor(a => a.Address, "Spouse")Spouse
+                </div>               
+            </div>
+                <div class="editor-label" id="pop10">
+                    <b>@Html.LabelFor(a => a.HowLongClientBeenAtAdressFor)</b>
+                </div>
+                <div class="editor-field" id="pop10">
+                    @Html.TextBoxFor(a => a.HowLongClientBeenAtAdressFor, new { style = "width:200px" })
+                </div>
+            <div id="pstn">
+                <div class="editor-label">
+                    <b>@Html.LabelFor(a => a.Flag)</b>
+                </div>
+                <div class="editor-field" id="elA10">
+                    @Html.CheckBoxFor(a => a.Flag)
+                </div>
+            </div>
+
+
+        </fieldset>
+        <fieldset style="border:solid; height:250px;">
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.DOB)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.TextBoxFor(a => a.DOB, new { type="date" })
+                
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.Country)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.TextBoxFor(a => a.Country)
+                
+            </div>
+
+
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.Gender)</b>
+            </div>
+
+            <div class="editor-field" id="elA">
+                <div>
+                        @Html.RadioButtonFor(a => a.Gender, "Male", new { @checked = "checked" }) Male
+                        @Html.RadioButtonFor(a => a.Gender, "Female")Female
+                </div>              
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.MaritalStatus)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                <div>
+                        @Html.RadioButtonFor(a => a.MaritalStatus, "Sinle", new { @checked = "checked" }) Single
+                        @Html.RadioButtonFor(a => a.MaritalStatus, "Married")Married
+                        @Html.RadioButtonFor(a => a.MaritalStatus, "Cohabiting")Cohabiting
+                        @Html.RadioButtonFor(a => a.MaritalStatus, "Widow")Widow
+                        @Html.RadioButtonFor(a => a.MaritalStatus, "Divorced/Seperated")Divorced/Seperated
+                </div>                              
+            </div>
+            <div class="editor-label" id="a1">
+                <b>@Html.LabelFor(a => a.EthnicGroup)</b>
+            </div>
+            <div class="editor-field" id="a2">
+                @Html.TextBoxFor(a => a.EthnicGroup, new { style = "width:200px;" })
+               
+            </div>
+            <div class="editor-label" id="a1">
+                <b>@Html.LabelFor(a => a.Religion)</b>
+            </div>
+            <div class="editor-field" id="a2">
+                @Html.TextBoxFor(a => a.Religion, new { style = "width:200px;" })
+                
+            </div>
+            <div class="editor-label" id="a1">
+                <b>@Html.LabelFor(a => a.HomeLang)</b>
+            </div>
+            <div class="editor-field" id="a2">
+                @Html.TextBoxFor(a => a.HomeLang, new { style = "width:200px;" })
+                
+            </div>
+        </fieldset>
+
+    </fieldset>
+    <fieldset style="border:solid; height:430px;">
+        <h3>REFUGEE STATUS DETAILS</h3>
+        <fieldset style="border: solid; height: 360px;">
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.ArrivalDate)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.TextBoxFor(a => a.ArrivalDate, new { style = "width:200px",type="date"  })
+                
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.typeOfApplicatn)</b>
+            </div>
+            <div class="editor-label" id="elA">
+                <div>
+                    @Html.RadioButtonFor(a => a.typeOfApplicatn, "sylum Seeker", new { @checked = "checked" }) Asylum Seeker
+                    @Html.RadioButtonFor(a => a.typeOfApplicatn, "Refugee")Refugee
+                    @Html.RadioButtonFor(a => a.typeOfApplicatn, "Undocumented")Undocumented
+                </div>
+             
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.DHAref)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.TextBoxFor(a => a.DHAref, new { style = "width:200px" })
+                
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.firstInterview)</b>
+            </div>
+            <div class="editor-label" id="elA">
+                <div>
+                    @Html.RadioButtonFor(a => a.firstInterview, "Yes", new { @checked = "checked" }) Yes
+                    @Html.RadioButtonFor(a => a.firstInterview, "No")No
+                </div>            
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.refugeeSTAT)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.TextBoxFor(a => a.refugeeSTAT, new { style = "width:200px" })
+                
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.UNCTD)</b>
+            </div>
+            <div class="editor-label" id="elA">
+                <div>
+                    @Html.RadioButtonFor(a => a.UNCTD, "Yes") Yes
+                    @Html.RadioButtonFor(a => a.UNCTD, "No", new { @checked = "checked" })No
+                </div>
+          
+            </div>
+            <div class="editor-label" id="e1">
+                <b>@Html.LabelFor(a => a.ArrivalDateDurban)</b>
+            </div>
+            <div class="editor-field" id="e2">
+                @Html.TextBoxFor(a => a.ArrivalDateDurban, new { style = "width:200px", type = "date" })                
+            </div>
+            <div class="editor-label" id="e1">
+                <b>@Html.LabelFor(a => a.dateGranted)</b>
+            </div>
+            <div class="editor-field" id="e2">
+                @Html.TextBoxFor(a => a.dateGranted, new { style = "width:200px", type = "date" })
+                
+            </div>
+            <div class="editor-label" id="e1">
+                <b>@Html.LabelFor(a => a.whenStatusExpire)</b>
+            </div>
+            <div class="editor-field" id="e2">
+                @Html.TextBoxFor(a => a.whenStatusExpire, new { style = "width:200px", type = "date" })
+               
+            </div>
+            <div class="editor-label" id="e1">
+                <b>@Html.LabelFor(a => a.firstInterviewDate)</b>
+            </div>
+            <div class="editor-field" id="e2">
+                @Html.TextBoxFor(a => a.firstInterviewDate, new { style = "width:200px", type = "date" })
+                
+            </div>
+            <div class="editor-label" id="e1">
+                <b>@Html.LabelFor(a => a.secondInterviewDate)</b>
+            </div>
+            <div class="editor-field" id="e2">
+                @Html.TextBoxFor(a => a.secondInterviewDate, new { style = "width:200px", type = "date" })
+               
+            </div>
+        </fieldset>
+    </fieldset>
+    <fieldset style="border:solid;">
+        <h3>ENGLISH ABILITY</h3>
+        <fieldset style="border:solid;">
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.englishAbility)</b>
+            </div>
+            <div class="editor-label" id="elA">
+                <div>
+                    @Html.RadioButtonFor(a => a.englishAbility, "No ability", new { @checked = "checked" }) No Ability
+                    @Html.RadioButtonFor(a => a.englishAbility, "Poor ability") Poor Ability
+                    @Html.RadioButtonFor(a => a.englishAbility, "Understand - Not Speak") Understand - Not Speak
+                    @Html.RadioButtonFor(a => a.englishAbility, "Speak and understand") Speak and Understand
+                </div>              
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.attendingEnglishClasses)</b>
+            </div>
+            <div class="editor-label" id="elA">
+                <div>
+                    @Html.RadioButtonFor(a => a.attendingEnglishClasses, "Yes", new { @checked = "checked" }) Yes
+                    @Html.RadioButtonFor(a => a.attendingEnglishClasses, "No") No
+                </div>
+           
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.whereAndHow)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.TextBoxFor(a => a.whereAndHow, new { style = "width:350px" })
+                
+            </div>
+        </fieldset>
+    </fieldset>
+    <fieldset style="border:solid; height:250px;">
+        <h3>ACCOMODATION</h3>
+        <fieldset style="border: solid; height: 150px;">
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.sharingAccomodation)</b>
+            </div>
+            <div class="editor-label" id="elA">
+                <div>
+                    @Html.RadioButtonFor(a => a.sharingAccomodation, "Yes", new { @checked = "checked" }) Yes
+                    @Html.RadioButtonFor(a => a.sharingAccomodation, "N0 ") No
+                </div>            
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.fullNamesOfSharers)</b>
+            </div>
+            <div class="editor-field" id="elA">
+                @Html.TextAreaFor(a => a.fullNamesOfSharers, new { style = "width:920px; resize:none;" })
+                
+            </div>
+        </fieldset>
+    </fieldset>
+    <input type="submit" value="Next Page"> 
+    <fieldset>
+        @Html.ValidationSummary(true, "Failed to Insert Info.")
+       <p>@Html.ValidationMessageFor(q => q.ApplicationRefNumber)</p>
+       <p>@Html.ValidationMessageFor(q => q.familyCode)</p>
+       <p>@Html.ValidationMessageFor(q => q.DateFileOpened)</p> 
+       <p>@Html.ValidationMessageFor(q => q.No)</p>
+       <p>@Html.ValidationMessageFor(a => a.Interpreter)</p>
+       <p>@Html.ValidationMessageFor(a => a.Surname)</p> 
+       <p>@Html.ValidationMessageFor(a => a.FirstName)</p> 
+       <p>@Html.ValidationMessageFor(a => a.Initials)</p> 
+       <p>@Html.ValidationMessageFor(a => a.CommunityName)</p> 
+       <p>@Html.ValidationMessageFor(a => a.ContactNumber)</p> 
+       <p>@Html.ValidationMessageFor(a => a.ContactName)</p> 
+       <p>@Html.ValidationMessageFor(a => a.Address)</p> 
+       <p>@Html.ValidationMessageFor(a => a.Address)</p> 
+       <p>@Html.ValidationMessageFor(a => a.HowLongClientBeenAtAdressFor)</p> 
+       <p>@Html.ValidationMessageFor(a => a.DOB)</p>
+       <p>@Html.ValidationMessageFor(a => a.Country)</p> 
+       <p>@Html.ValidationMessageFor(a => a.EthnicGroup)</p> 
+       <p>@Html.ValidationMessageFor(a => a.Religion)</p> 
+       <p>@Html.ValidationMessageFor(a => a.HomeLang)</p> 
+       <p>@Html.ValidationMessageFor(a => a.ArrivalDate)</p>  
+       <p>@Html.ValidationMessageFor(a => a.DHAref)</p> 
+       <p>@Html.ValidationMessageFor(a => a.refugeeSTAT)</p> 
+       <p>@Html.ValidationMessageFor(a => a.typeOfApplicatn)</p> 
+       <p>@Html.ValidationMessageFor(a => a.ArrivalDateDurban)</p> 
+       <p>@Html.ValidationMessageFor(a => a.dateGranted)</p> 
+       <p>@Html.ValidationMessageFor(a => a.whenStatusExpire)</p> 
+       <p>@Html.ValidationMessageFor(a => a.whereAndHow)</p> 
+       <p>@Html.ValidationMessageFor(a => a.fullNamesOfSharers)</p> 
+    </fieldset>
+   
+}
+
+
+<style>
+    #pop10 {
+        position: relative;
+        top: -158px;
+        right: -700px;
+    }
+    #e1 {
+        position: relative;
+        top: -375px;
+        right: -700px;
+    }
+
+    #e2 {
+        position: relative;
+        top: -400px;
+        right: -900px;
+    }
+
+    #z1 {
+        height: 200px;
+    }
+
+    #a1 {
+        position: relative;
+        top: -235px;
+        right: -700px;
+    }
+
+    #a2 {
+        position: relative;
+        top: -262px;
+        right: -850px;
+    }
+</style>

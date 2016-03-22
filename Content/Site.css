@@ -1,0 +1,476 @@
+﻿body {
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+    #buttonYea {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+    }
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+/*Questionnaire*/
+  #z11 {
+        position: relative;
+        top: -324px;
+        right: -610px;
+    }
+    #z9 {
+        position: relative;
+        top: -350px;
+        right: -760px;
+    }
+    #z7 {
+        position: relative;
+        top: -300px;
+        right: -610px;
+    }
+    #z8 {
+        position: relative;
+        top: -324px;
+        right: -700px;
+    }
+    #z6 {
+        position: relative;
+        top: -324px;
+        right: -610px;
+    }
+    #z5 {
+        position: relative;
+        top: -54px;
+        right: -218px;
+    }
+    #input01{
+        text-align:center;
+        
+    }
+    #z3 {
+        position: relative;
+        top: -178px;
+        right: -600px;
+    }
+    #z4 {
+        position: relative;
+        top: -204px;
+        right: -750px;
+    }
+    #z1 {
+        position: relative;
+        top: -240px;
+        right: -400px;
+    }
+    #z2 {
+        position: relative;
+        top: -263px;
+        right: -600px;
+    }
+    #ela {
+        position: relative;
+        top: -25px;
+        right: -400px;
+    }
+    #elA15 {
+        position: relative;
+        top: -1063px;
+        right: -930px;
+    }
+    #id11 {
+        position: relative;
+        top: -1040px;
+        right: -930px;
+    }
+    #elA14 {
+        position: relative;
+        top: -1063px;
+        right: -1050px;
+    }
+    #id10 {
+        position: relative;
+        top: -808px;
+        right: -575px;
+    }
+    #elA13 {
+        position: relative;
+        top: -833px;
+        right: -735px;
+    }
+    #id9 {
+        position: relative;
+        top: -608px;
+        right: -420px;
+    }
+    #elA12 {
+        position: relative;
+        top: -633px;
+        right: -471px;
+    }
+    #id8 {
+        position: relative;
+        top: -578px;
+        right: -420px;
+    }
+    #elA11 {
+        position: relative;
+        top: -603px;
+        right: -471px;
+    }
+    #id7 {
+        position: relative;
+        top: -465px;
+        right: -300px;
+    }
+    #elA9 {
+        position: relative;
+        top: -488px;
+        right: -415px;
+    }
+    #id6 {
+        position: relative;
+        top: -435px;
+        right: -300px;
+    }
+    #elA8 {
+        position: relative;
+        top: -458px;
+        right: -360px;
+    }
+    #id5 {
+        position: relative;
+        top: -405px;
+        right: -300px;
+    }
+    #elA7 {
+        position: relative;
+        top: -428px;
+        right: -360px;
+    }
+    #id4 {
+        position: relative;
+        top: -405px;
+        right: -300px;
+    }
+    #elA6 {
+        position: relative;
+        top: -428px;
+        right: -470px;
+    }
+    #q4 {
+        position: relative;
+        top: -201px;
+        right: -160px;
+    }
+    #w4 {
+        position: relative;
+        top: -178px;
+        right: -100px;
+    }
+    #w3 {
+        position: relative;
+        top: -148px;
+        right: -100px;
+    }
+    #q3 {
+        position: relative;
+        top: -173px;
+        right: -160px;
+    }
+    #q2 {
+        position: relative;
+        top: -88px;
+        right: -65px;
+    }
+    #w2 {
+        position: relative;
+        top: -65px;
+    }
+    #w1 {
+        position: relative;
+        top: -35px;
+    }
+    #q1 {
+        position: relative;
+        top: -58px;
+        right: -65px;
+    }
+
+    #id3 {
+        position: relative;
+        top: -290px;
+        right: -920px;
+    }
+    #elA4 {
+        position: relative;
+        top: -313px;
+        right: -1050px;
+    }
+    #elA5 {
+        position: relative;
+        top: -280px;
+        right: -920px;
+        width: 250px;
+    }
+    #id1{
+        position:relative;
+        top:-115px;
+        right:-300px;
+    }
+    #id2 {
+        position: relative;
+        top: -230px;
+        right: -550px;
+    }
+    #elA3 {
+        position: relative;
+        top: -255px;
+        right: -730px;
+    }
+    #elA2{
+        position:relative;
+        top:-140px;
+        right:-470px;
+    }
+    #n7 {
+        position: relative;
+        top: -200px;
+        right: -620px;
+    }
+    #m6 {
+        position: relative;
+        top: -225px;
+        right: -820px;
+    }
+    #m5 {
+        position: relative;
+        top: -145px;
+        right: -620px;
+    }
+    #n4 {
+        position: relative;
+        top: -145px;
+        right: -690px;
+    }
+    #n2 {
+        position: relative;
+        top: -200px;
+        right: -620px;
+    }
+    #n3 {
+        position: relative;
+        top: -145px;
+        right: -620px;
+    }
+    #m5 {
+        position: relative;
+        top: -120px;
+        right: -500px;
+    }
+    #m4 {
+        position: relative;
+        top: -175px;
+        right: -500px;
+    }
+    #m3 {
+        position: relative;
+        top: -25px;
+        right: -250px;
+    }
+    #m1{
+        position:relative;
+        top:-240px;
+        right:-190px;
+    }
+    #n1 {
+        position: relative;
+        top: -870px;
+        right: -800px;
+    }
+    #m2 {
+        position: relative;
+        top: -895px;
+        right: -955px;
+    }
+    h10 {
+        position: relative;
+        top: -10px;
+        right: 185px;
+    }
+
+ #psn10{
+        height:250px;
+    } 
+    #elA10 {
+        position: relative;
+        right: -30px;
+        top: -23px;
+    } 
+    #pstn {
+        position: relative;
+        top: -160px;
+    } 
+    #NEW {
+        position: relative;
+        top: -120px;
+        right: -550px;
+    }
+    #WCN{
+        position:relative;
+        top:-235px;
+        right:-540px;
+    }
+    
+    #align2 {
+        height: 150px;
+    } 
+    #elR2 {
+        position: relative;
+        top: -185px;
+        right: -700px;
+    } 
+    #efR2{
+        position:relative;
+        top:-210px;
+        right:-900px;
+    }
+    #elR {
+        position: relative;
+        top: -180px;
+        right: -700px;
+    }
+#elR1{
+    position:relative;
+    top:-210px;
+    right:-925px;
+}
+    #elA{
+    position:relative;
+    top: -25px;
+    right:-170px;
+    }
+    #hed1{
+        position:relative;
+        top:-35px;
+        right:-950px;
+    }
+    #demo{
+        position:relative;
+        top:-68px;
+        right:-940px;
+    }
+
+    #txt1 {
+        position: relative;
+        top: -245px;
+        right: -885px;
+    }
+    #el3,#ef3 {
+        position: relative;
+        top: -203px;
+        right: -980px;
+    }
+    #align {
+        height: 180px;
+        border:solid;
+    }
+    #el2 {
+        position: relative;
+        top: -120px;
+        right: -760px;
+    }
+    #ef2 {
+        position: relative;
+        top: -145px;
+        right: -865px;
+    }
+    #el1 {
+        position: relative;
+        top: -60px;
+        right: -380px;
+    }
+    #ef1 {
+        position: relative;
+        top: -85px;
+        right: -500px;
+    }
+    #ef{
+        position:relative;
+        top:-25px;
+        right:-160px;
+    }
+    #l1{
+        position:relative;
+        top:-70px;
+        right:-120px;
+    }
+    #h1a{
+        text-align:center;
+        position:relative;
+        top:-60px;
+    }
+    h7 {
+        position: relative;
+        top: -40px;
+    }
+    h8{
+        position:relative;
+        top:-100px;
+        right:-108px;
+    }

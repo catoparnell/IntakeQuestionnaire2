@@ -1,0 +1,199 @@
+﻿@model IntakeQuestionnaire.Models.QuestionnairePageFive
+
+<img src="~/Images/Mennonite_Central_Committee_Logo.png" /><h7>Mennonite Centeral Committe</h7>
+<h10>KwaZulu Natal</h10>
+@using (Html.BeginForm())
+{
+    <fieldset style="border:solid;">
+        <h3>HEALTH</h3>
+        <fieldset style="border:solid; height:700px;">
+            <div class="editor-label">
+                <b>@Html.LabelFor(x => x.CurrentMedical)</b>
+            </div>
+            <div class="editor-field" id="elz">
+                @Html.RadioButtonFor(x => x.CurrentMedical, "Yes", new {@checked="checked" })<b>Yes</b>
+                @Html.RadioButtonFor(x => x.CurrentMedical, "No")<b>No</b>
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(x => x.ifYesList)</b>
+            </div>
+            <div class="editor-field">
+                @Html.TextAreaFor(x => x.ifYesList, new { style = "width:550px; height:200px; resize:none;" })
+            </div>
+            ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            <div class="editor-label">
+                <b>@Html.LabelFor(x => x.areYouPregnant)</b>
+            </div>
+            <div class="editor-field" id="elz">
+                @Html.RadioButtonFor(x => x.areYouPregnant, "Yes", new { @checked = "checked" })<b>Yes</b>
+                @Html.RadioButtonFor(x => x.areYouPregnant, "No")<b>No</b>
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(x => x.spousePregnant)</b>
+            </div>
+            <div class="editor-field" id="elz">
+                @Html.RadioButtonFor(x => x.spousePregnant, "Yes", new { @checked = "checked" })<b>Yes</b>
+                @Html.RadioButtonFor(x => x.spousePregnant, "No")<b>No</b>
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(x => x.ifYesDetailsOfPreg)</b>
+            </div>
+            <div class="editor-field">
+                @Html.TextAreaFor(x => x.ifYesDetailsOfPreg, new { style = "width:550px; height:200px; resize:none;" })
+            </div>
+
+            <div class="editor-label" id="op1">
+                <b>@Html.LabelFor(x => x.doYouHaveChronic)</b>
+            </div>
+            <div class="editor-field" id="op2">
+                @Html.RadioButtonFor(x => x.doYouHaveChronic, "Yes", new { @checked = "checked" })<b>Yes</b>
+                @Html.RadioButtonFor(x => x.doYouHaveChronic, "No")<b>No</b>
+            </div>
+            <div class="editor-label" id="op1">
+                <b>@Html.LabelFor(x => x.ifYesWhenDiagnosed)</b>
+            </div>
+            <div class="editor-field" id="op1">
+                @Html.TextAreaFor(x => x.ifYesWhenDiagnosed, new { style = "width:550px;  resize:none;" })
+            </div>
+            <div class="editor-label" id="op1">
+                <b>@Html.LabelFor(x => x.whereTreatedandWhat)</b>
+            </div>
+            <div class="editor-field" id="op1">
+                @Html.TextAreaFor(x => x.whereTreatedandWhat, new { style = "width:550px;  resize:none;" })
+            </div>
+            <br />
+            <div class="editor-label" id="op1">
+                <b>@Html.LabelFor(x => x.areyouorfamily)</b>
+            </div>
+            <div class="editor-field" id="op2">
+                @Html.RadioButtonFor(x => x.areyouorfamily, "Yes", new { @checked = "checked" })<b>Yes</b>
+                @Html.RadioButtonFor(x => x.areyouorfamily, "No")<b>No</b>
+            </div>
+            <div class="editor-label" id="op1">
+                <b>@Html.LabelFor(x => x.ifYesWhoAndwhat)</b>
+            </div>
+            <div class="editor-field" id="op1">
+                @Html.TextAreaFor(x => x.ifYesWhoAndwhat, new { style = "width:550px; height:260px; resize:none;" })
+            </div>
+        </fieldset>
+        <h3>EDUCATION & SCHOOLING</h3>
+        <fieldset style="border:solid; height:1000px;">
+            <br /><br />
+            <b id="elz">Principle Applicant</b>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.levelofschooling)</b>
+            </div>
+            <div class="editor-field" id="elz">
+                @Html.RadioButtonFor(x => x.levelofschooling, "Primary", new { @checked = "checked" })<b>Primary</b>
+                @Html.RadioButtonFor(x => x.levelofschooling, "Secondary")<b>Secondary</b>
+                @Html.RadioButtonFor(x => x.levelofschooling, "Tertiary")<b>Tertiary</b>
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(x => x.schoolingdetails)</b>
+            </div>
+            <div class="editor-field" id="elz">
+                @Html.TextAreaFor(x => x.schoolingdetails, new { style = "width:400px; height:100px; resize:none;" })
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(a => a.tertiaryeducation)</b>
+            </div>
+            <div class="editor-field" id="elz">
+                @Html.RadioButtonFor(x => x.tertiaryeducation, "Yes", new { @checked = "checked" })<b>Yes</b>
+                @Html.RadioButtonFor(x => x.tertiaryeducation, "No")<b>No</b>
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(x => x.tertiaryeducationlevel)</b>
+            </div>
+            <div class="editor-field" id="elz">
+                @Html.TextAreaFor(x => x.tertiaryeducationlevel, new { style = "width:400px; height:100px; resize:none;" })
+            </div>
+            <div class="editor-label">
+                <b>Original certificates/<br /> diplomas etc.</b>
+            </div>
+            <div class="editor-field" id="elz">
+                @Html.RadioButtonFor(x => x.originalcertificates, "Yes", new { @checked = "checked" })<b>Yes</b>
+                @Html.RadioButtonFor(x => x.originalcertificates, "No")<b>No</b>
+            </div>
+            <div class="editor-label">
+                <b>@Html.LabelFor(x => x.ifyesspecify)</b>
+            </div>
+            <div class="editor-field" id="elz">
+                @Html.TextAreaFor(x => x.ifyesspecify, new { style = "width:400px; height:100px; resize:none;" })
+            </div>
+            <div class="editor-label">
+                <b>Last 3 jobs prior to SA<br /> Specify time period at each</b>
+            </div>
+            <div class="editor-field" id="elz">
+                @Html.TextAreaFor(x => x.last3jobsprior, new { style = "width:400px; height:100px; resize:none;" })
+            </div>
+            -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            <div class="editor-label">
+                <b>@Html.LabelFor(x => x.ListofSkillsOfyourfamily)</b>
+            </div>
+            <div class="editor-field" id="elz">
+                @Html.TextAreaFor(x => x.ListofSkillsOfyourfamily, new { style = "width:1000px; height:100px; resize:none;" })
+            </div>
+            <b id="op4">Spouse</b>
+
+            <div class="editor-field" id="op5">
+                @Html.RadioButtonFor(x => x.levelofschoolingSpouse, "Primary", new { @checked = "checked" })<b>Primary</b>
+                @Html.RadioButtonFor(x => x.levelofschoolingSpouse, "Secondary")<b>Secondary</b>
+                @Html.RadioButtonFor(x => x.levelofschoolingSpouse, "Tertiary")<b>Tertiary</b>
+            </div>
+            <br /><br />
+            <div class="editor-field" id="op5">
+                @Html.TextAreaFor(x => x.schoolingdetailsSpouse, new { style = "width:400px; height:100px; resize:none;" })
+            </div>
+            <br /><br />
+            <div class="editor-field" id="op5">
+                @Html.RadioButtonFor(x => x.tertiaryeducationSpouse, "Yes", new { @checked = "checked" })<b>Yes</b>
+                @Html.RadioButtonFor(x => x.tertiaryeducationSpouse, "No")<b>No</b>
+            </div>
+            <br />
+            <div class="editor-field" id="op5">
+                @Html.TextAreaFor(x => x.tertiaryeducationlevelSpouse, new { style = "width:400px; height:100px; resize:none;" })
+            </div>
+            <br /><br /><br />
+            <div class="editor-field" id="op5">
+                @Html.RadioButtonFor(x => x.originalcertificatesSpouse, "Yes", new { @checked = "checked" })<b>Yes</b>
+                @Html.RadioButtonFor(x => x.originalcertificatesSpouse, "No")<b>No</b>
+            </div><br />
+            <br />
+            <div class="editor-field" id="op5">
+                @Html.TextAreaFor(x => x.ifyesspecifySpouse, new { style = "width:400px; height:100px; resize:none;" })
+            </div><br /><br /><br />
+            <div class="editor-field" id="op5">
+                @Html.TextAreaFor(x => x.last3jobspriorSpouse, new { style = "width:400px; height:100px; resize:none;" })
+            </div>
+        </fieldset>
+    </fieldset>
+    <input type="submit" value="Next Page" />
+}
+
+<style>
+    #elz {
+        position: relative;
+        top: -25px;
+        right: -240px;
+    }
+    #op4 {
+        position: relative;
+        top: -1005px;
+        right: -800px;
+    }
+    #op1{
+        position:relative;
+        top:-686px;
+        right:-700px;
+    }
+    #op2 {
+        position: relative;
+        top: -686px;
+        right: -700px;
+    }
+    #op5 {
+        position: relative;
+        top: -978px;
+        right: -800px;
+    }
+</style>

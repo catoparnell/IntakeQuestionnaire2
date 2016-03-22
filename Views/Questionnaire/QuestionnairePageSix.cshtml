@@ -1,0 +1,166 @@
+﻿@model IntakeQuestionnaire.Models.Questionnaire
+@using (Html.BeginForm())
+{
+    <fieldset id="align">
+        <img src="~/Images/Mennonite_Central_Committee_Logo.png" /><h7>Mennonite Centeral Committe</h7><h1 id="h1a">SUMMARY OF SERICES RENDERED</h1>
+        <h8>KwaZulu Natal</h8>
+   
+        <div id="l1">
+            <div class="editor-label">
+                <b>@Html.LabelFor(q => q.ApplicationRefNumber)</b>
+            </div>
+            <div class="editor-field" id="ef">
+                @Html.TextBoxFor(q => q.ApplicationRefNumber, new { @Value = ViewBag.RefNum  })
+            </div>
+            <div id="el1" class="editor-label">
+                <b>@Html.LabelFor(q => q.familyCode)</b>
+            </div>
+            <div class="editor-field" id="ef1">
+                @Html.TextBoxFor(q => q.familyCode)
+
+            </div>
+        </div>
+    </fieldset>
+    <fieldset style="border:solid">
+        <table style="width:100%" id="myTable">
+            <tr style="text-align:left">
+                <td>Service</td>
+                <td>Type</td>
+                <td>Start Date<br />(yyyy / mm/dd)</td>
+                <td>End Date<br />(yyyy / mm/dd)</td>
+                <td>Details</td>
+                <td>Amount <br />R</td>
+            </tr>
+            <tr>
+                <td><input name="inputGrid1" value="" list="Service"/> </td>
+                <td><input name="inputGrid2" list="Type"> </td>
+                <td><input id="inputGrid" name="inputGrid3" type="date" /></td>
+                <td><input id="inputGrid" name="inputGrid4" type="date" /></td>
+                <td><input id="inputGrid" name="inputGrid5" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid6" type="number" /></td>
+
+
+            </tr>
+            <tr>
+                <td><input name="inputGrid1a" list="Service"></td>
+                <td><input name="inputGrid2a" list="Type"></td>
+                <td><input id="inputGrid" name="inputGrid3a" type="date" /></td>
+                <td><input id="inputGrid" name="inputGrid4a" type="date" /></td>
+                <td><input id="inputGrid" name="inputGrid5a" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid6a" type="number" /></td>
+            </tr>
+            <tr>
+                <td><input name="inputGrid1b" list="Service"></td>
+                <td><input name="inputGrid2b" list="Type"></td>
+                <td><input id="inputGrid" name="inputGrid3b" type="date" /></td>
+                <td><input id="inputGrid" name="inputGrid4b" type="date" /></td>
+                <td><input id="inputGrid" name="inputGrid5b" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid6b" type="number" /></td>
+            </tr>
+            <tr>
+
+                <td><input name="inputGrid1c" list="Service"></td>
+                <td><input name="inputGrid2c" list="Type"></td>
+                <td><input id="inputGrid" name="inputGrid3c" type="date" /></td>
+                <td><input id="inputGrid" name="inputGrid4c" type="date" /></td>
+                <td><input id="inputGrid" name="inputGrid5c" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid6c" type="number" /></td>
+            </tr>
+            <tr>
+                <td><input name="inputGrid1d" list="Service"></td>
+                <td><input name="inputGrid2d" list="Type"></td>
+                <td><input id="inputGrid" name="inputGrid3d" type="date" /></td>
+                <td><input id="inputGrid" name="inputGrid4d" type="date" /></td>
+                <td><input id="inputGrid" name="inputGrid5d" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid6d" type="number" /></td>
+            </tr>
+            <tr>
+                <td><input name="inputGrid1e" list="Service"></td>
+                <td><input name="inputGrid2e" list="Type"></td>
+                <td><input id="inputGrid" name="inputGrid3e" type="date" /></td>
+                <td><input id="inputGrid" name="inputGrid4e" type="date" /></td>
+                <td><input id="inputGrid" name="inputGrid5e" type="text" /></td>
+                <td><input id="inputGrid" name="inputGrid6e" type="number" /></td>
+
+            </tr>
+
+        </table>
+        <datalist id="Service">
+            <option value="Education ED">
+            <option value="Emergency EM">
+            <option value="Funeral Assistance FA">
+            <option value="Social Assistance SA">
+            <option value="Vocational Training VT">
+        </datalist>
+        <datalist id="Type">
+            <option value="Food FO">
+            <option value="Medical ME">
+            <option value="Rental RE">
+            <option value="School Fees FE">
+            <option value="Transport TR">
+            <option value="Uniforms UN">
+            <option value="Creche CR">
+            <option value="Elderly Grand EG">
+            <option value="CSG CS">
+            <option value="DG DG">
+        </datalist>
+        <input id="buttonYea" type="button" class="button" value="Add another line " onclick="addField();">
+    </fieldset>
+    <input id="buttonYea" type="submit" value="Finish" />
+}
+
+
+<script>
+    var count = 0;
+    function addField(argument) {
+        
+        if (count < 3) {
+            count += 1;
+            var myTable = document.getElementById("myTable");
+            var currentIndex = myTable.rows.length;
+            var currentRow = myTable.insertRow(-1);
+
+            var linksBox = document.createElement("input");
+            linksBox.setAttribute("name", "links" + currentIndex);
+
+            var keywordsBox = document.createElement("input");
+            keywordsBox.setAttribute("name", "keywords" + currentIndex);
+
+            var violationsBox = document.createElement("input");
+            violationsBox.setAttribute("name", "violationtype" + currentIndex);
+
+            var endDBox = document.createElement("input");
+            endDBox.setAttribute("name", "endD" + currentIndex);
+
+            var detailsBox = document.createElement("input");
+            detailsBox.setAttribute("name", "details" + currentIndex);
+
+            var amountsBox = document.createElement("input");
+            amountsBox.setAttribute("name", "amounts" + currentIndex);
+            //******************************//
+            var currentCell = currentRow.insertCell(-1);
+            currentCell.appendChild(linksBox);
+
+            currentCell = currentRow.insertCell(-1);
+            currentCell.appendChild(keywordsBox);
+
+            currentCell = currentRow.insertCell(-1);
+            currentCell.appendChild(violationsBox);
+
+            currentCell = currentRow.insertCell(-1);
+            currentCell.appendChild(endDBox);
+
+            currentCell = currentRow.insertCell(-1);
+            currentCell.appendChild(detailsBox);
+
+            currentCell = currentRow.insertCell(-1);
+            currentCell.appendChild(amountsBox);
+            
+        }
+        
+        else {
+            alert("Max amout of Lines added.");
+        }
+
+    }
+</script>
